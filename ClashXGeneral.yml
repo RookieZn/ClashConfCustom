@@ -68,6 +68,7 @@ dns:
   enable: true
   ipv6: false
   listen: 0.0.0.0:53
+  fake-ip-range: 198.18.0.1/16
   enhanced-mode: redir-host
   nameserver:
     - 1.2.4.8
@@ -79,6 +80,12 @@ dns:
     - tls://1.1.1.1:853
     - tls://1.0.0.1:853
     - tls://dns.google:853
+    
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - tcp://8.8.8.8:53
 
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
