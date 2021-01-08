@@ -80,7 +80,7 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
   fake-ip-filter:
-    - hzci.ddns.net
+    - '*.ddns.net'
 
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
