@@ -80,7 +80,9 @@ dns:
     - tls://1.1.1.1:853
     - tls://1.0.0.1:853
     - tls://dns.google:853
-    
+  fake-ip-filter:
+    - *.ddns.net
+ 
 tun:
   enable: true
   stack: system
