@@ -82,6 +82,7 @@ dns:
     - tls://dns.google:853
   fake-ip-filter:
     - *.ddns.net
+    - meplocal.*.com
  
 tun:
   enable: true
