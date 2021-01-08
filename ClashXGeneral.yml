@@ -83,15 +83,6 @@ dns:
   fake-ip-filter:
     - *.ddns.net
     - meplocal.*.com
- 
-tun:
-  enable: true
-  stack: system
-  macOS-auto-route: true
-  macOS-auto-detect-interface: true
-  dns-hijack:
-    - tcp://8.8.8.8:53
-    - 8.8.8.8:1053
 
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
