@@ -66,29 +66,19 @@ experimental:
 
 dns:
   enable: true
-  ipv6: false
-  listen: 0.0.0.0:53
-  enhanced-mode: fake-ip
+  enhanced-mode: redir-host
   nameserver:
     - 1.2.4.8
     - 119.29.29.29
-    - 223.5.5.5
-    - 1.1.1.1
-    - tls://dns.rubyfish.cn:853
-  fallback:
-    - tls://1.1.1.1:853
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
-  fake-ip-filter:
-    - '*.ddns.net'
-    
+    - 114.114.114.114
+  
 tun:
   enable: true
-  stack: system # 或 gvisor
-  dns-hijack: # DNS劫持设置为系统DNS
-    - 1.2.4.8 # 可任意设置，但为了保证CFW关闭后能不影响联网，建议设置真实能访问的DNS服务器
+  stack: system
+  dns-hijack:
+    - 1.2.4.8
   macOS-auto-route: true
-  macOS-auto-detect-interface: true # 自动检测出口网卡
+  macOS-auto-detect-interface: true
 
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
