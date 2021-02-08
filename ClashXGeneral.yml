@@ -68,15 +68,17 @@ dns:
   enable: true
   enhanced-mode: redir-host
   nameserver:
-    - 1.2.4.8
     - 119.29.29.29
+    - 223.5.5.5
     - 114.114.114.114
   
 tun:
   enable: true
   stack: system
   dns-hijack:
-    - 1.2.4.8
+    - 119.29.29.29
+    - 223.5.5.5
+    - 114.114.114.114
   macOS-auto-route: true
   macOS-auto-detect-interface: true
 
