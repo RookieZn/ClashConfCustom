@@ -66,7 +66,7 @@ experimental:
 
 dns:
   enable: true
-  enhanced-mode: fake-ip
+  enhanced-mode: redir-host
   nameserver:
      - 119.29.29.29 # 腾讯DNS
      - 223.5.5.5 # 阿里DNS
